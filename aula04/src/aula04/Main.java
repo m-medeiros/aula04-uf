@@ -11,7 +11,7 @@ public class Main {
 		int numbers = sc.nextInt();
 		for (int k = 1; k <= numbers; k++){
 		int fatorial = inputNumber();
-		System.out.printf("Resultado do fatorial de "+fatorial+" ("+fatorial+"!): = "+resultFatorial(fatorial, sc)+"\n");
+		System.out.printf("Resultado do fatorial de "+fatorial+" ("+fatorial+"!): = "+resultFatorial(fatorial)+"\n");
 		}
 	}
 
@@ -32,7 +32,7 @@ public class Main {
 		return number;
 	}
 
-	public static long resultFatorial(int Fatorial, Scanner sc) {
+	public static long resultFatorial(int Fatorial) {
 		long result = 1;
 		if(checkLog() == true) {			
 			for(int i = 1; i<= Fatorial; i++) {
