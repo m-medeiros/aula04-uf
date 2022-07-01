@@ -3,17 +3,19 @@ package aula04;
 import java.util.Scanner;
 
 public class Main {
+	public static Scanner sc = new Scanner(System.in);
+	
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Quantos fatoriais você deseja calcular?");
 		int numbers = sc.nextInt();
 		for (int k = 1; k <= numbers; k++){
-		int fatorial = inputNumber(sc);
+		int fatorial = inputNumber();
 		System.out.printf("Resultado do fatorial de "+fatorial+" ("+fatorial+"!): = "+resultFatorial(fatorial, sc)+"\n");
 		}
 	}
 
-	private static boolean checkLog(Scanner sc) {
+	private static boolean checkLog() {
 		System.out.println("Deseja acompanhar a log dos resultados? (true/false)");
 		sc.nextLine();
 		boolean check = sc.nextBoolean();
@@ -24,7 +26,7 @@ public class Main {
 		
 	}
 
-	private static int inputNumber(Scanner sc) {		
+	private static int inputNumber() {		
 		System.out.println("Qual número você quer calcular o fatorial?");
 		int number = sc.nextInt();
 		return number;
@@ -32,7 +34,7 @@ public class Main {
 
 	public static long resultFatorial(int Fatorial, Scanner sc) {
 		long result = 1;
-		if(checkLog(sc) == true) {			
+		if(checkLog() == true) {			
 			for(int i = 1; i<= Fatorial; i++) {
 				long previousResult = result;
 				result = result * i;
