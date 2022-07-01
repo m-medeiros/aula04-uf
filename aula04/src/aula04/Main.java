@@ -5,8 +5,12 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantos fatoriais você deseja calcular?");
+		int numbers = sc.nextInt();
+		for (int k = 1; k <= numbers; k++){
 		int fatorial = inputNumber(sc);
-		System.out.printf("Resultado do fatorial de "+fatorial+" ("+fatorial+"!): = "+resultFatorial(fatorial, sc));
+		System.out.printf("Resultado do fatorial de "+fatorial+" ("+fatorial+"!): = "+resultFatorial(fatorial, sc)+"\n");
+		}
 	}
 
 	private static boolean checkLog(Scanner sc) {
@@ -30,8 +34,11 @@ public class Main {
 		long result = 1;
 		if(checkLog(sc) == true) {			
 			for(int i = 1; i<= Fatorial; i++) {
+				long previousResult = result;
 				result = result * i;
-				System.out.printf(Fatorial+" * "+ i +" = "+result+"\n");
+				System.out.printf(previousResult+" * "+ i +" = "+result+"\n");
+				previousResult = result;
+				
 			}
 		}
 		else {
