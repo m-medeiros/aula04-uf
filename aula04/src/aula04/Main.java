@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int fatorial = inputNumber(sc);
-		System.out.printf("Resultado = "+resultFatorial(fatorial, sc));
+		System.out.printf("Resultado do fatorial de "+fatorial+" ("+fatorial+"!): = "+resultFatorial(fatorial, sc));
 	}
 
 	private static boolean checkLog(Scanner sc) {
